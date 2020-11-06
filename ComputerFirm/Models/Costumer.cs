@@ -20,7 +20,7 @@ namespace Computerfirm.Models
 
         [Display(Name = "Адрес")]
         public string Address { get; set; }
-        public DbSet<Customer> Customers { get; set; }
+       
 
     }
 }

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Computerfirm\\BDComp\\ComputerFirm\\ComputerFirm\\ComputerFirm.csproj": {}
+    "C:\\Users\\Admin\\Desktop\\BDComp\\ComputerFirm\\ComputerFirm.csproj": {}
   },
   "projects": {
-    "C:\\Computerfirm\\BDComp\\ComputerFirm\\ComputerFirm\\ComputerFirm.csproj": {
+    "C:\\Users\\Admin\\Desktop\\BDComp\\ComputerFirm\\ComputerFirm.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Computerfirm\\BDComp\\ComputerFirm\\ComputerFirm\\ComputerFirm.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\BDComp\\ComputerFirm\\ComputerFirm.csproj",
         "projectName": "ComputerFirm",
-        "projectPath": "C:\\Computerfirm\\BDComp\\ComputerFirm\\ComputerFirm\\ComputerFirm.csproj",
-        "packagesPath": "C:\\Users\\kolgn\\.nuget\\packages\\",
-        "outputPath": "C:\\Computerfirm\\BDComp\\ComputerFirm\\ComputerFirm\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\BDComp\\ComputerFirm\\ComputerFirm.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\BDComp\\ComputerFirm\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\kolgn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -81,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
