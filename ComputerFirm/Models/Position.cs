@@ -10,6 +10,8 @@ namespace Computerfirm.Models
 {
     public class Position
     {
+        public long ID { get; set; }
+        [Display(Name = "Код должности")]
         public long PositionID { get; set; }
 
         [Display(Name = "Наименование должности")]
@@ -23,6 +25,6 @@ namespace Computerfirm.Models
 
         [Display(Name = "Требования")]
         public string Requirements { get; set; }
-        public DbSet<Position> Positions { get; set; } 
+
     }
 }

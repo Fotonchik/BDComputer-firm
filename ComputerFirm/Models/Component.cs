@@ -10,6 +10,9 @@ namespace Computerfirm.Models
 {
     public class Component
     {
+
+        public long ID { get; set; }
+        [Display(Name = "Код комплектующего")]
         public long ComponentID { get; set; }
 
 
@@ -42,10 +45,13 @@ namespace Computerfirm.Models
         [Display(Name = "Страна производитель")]
         public string CountryProduced{ get; set; }
 
-        public DbSet<Staff> StaffID { get; set; }
-        public DbSet<Component> Components { get; set; }
+
+        [Display(Name = "Вид комплектующего")]
         public DbSet<TypesofСomponent> TypesofСomponent { get; set; }
 
+        [Display(Name = "Код вида")]
+
+        public long TypesofСomponent_ID { get; set; }
 
     }
 }

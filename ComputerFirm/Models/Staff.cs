@@ -10,6 +10,9 @@ namespace Computerfirm.Models
 {
     public class Staff
     {
+
+        public long ID { get; set; }
+        [Display(Name = "Код сотрудника")]
         public long StaffID { get; set; }
         [Display(Name ="ФИО")]
         public string FullName { get; set; }

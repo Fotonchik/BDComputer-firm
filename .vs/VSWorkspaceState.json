@@ -3,7 +3,9 @@
     "",
     "\\ComputerFirm",
     "\\ComputerFirm\\Migrations",
-    "\\ComputerFirm\\Models"
+    "\\ComputerFirm\\Models",
+    "\\ComputerFirm\\Pages",
+    "\\ComputerFirm\\Pages\\Orders"
   ],
   "SelectedNode": "\\ComputerFirm\\Models\\Order.cs",
   "PreviewInSolutionExplorer": false

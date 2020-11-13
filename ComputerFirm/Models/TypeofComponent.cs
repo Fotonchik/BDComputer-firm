@@ -10,6 +10,8 @@ namespace Computerfirm.Models
 {
     public class TypesofСomponent
     {
+        public long ID { get; set; }
+        [Display(Name = "Код вида комплектующего")]
         public long TypesofСomponentID { get; set; }
         [Display(Name = "Наименование")]
         public string NameTypesofComponents { get; set; }

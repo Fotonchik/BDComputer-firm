@@ -10,6 +10,8 @@ namespace Computerfirm.Models
 {
     public class Service
     {
+        public long ID { get; set; }
+        [Display(Name = "Код услуги")]
         public long ServiceID { get; set; }
 
         [Display(Name = "Наименование")]
@@ -19,6 +21,5 @@ namespace Computerfirm.Models
         [Display(Name = "Описание")]
 
         public string Description { get; set; }
-        public DbSet<Service> Services { get; set; }
     }
 }
