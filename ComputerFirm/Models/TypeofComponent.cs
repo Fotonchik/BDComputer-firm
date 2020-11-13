@@ -10,15 +10,14 @@ namespace Computerfirm.Models
 {
     public class TypesofСomponent
     {
+        [Display(Name = "Код вида")]
         public long ID { get; set; }
-        [Display(Name = "Код вида комплектующего")]
-        public long TypesofСomponentID { get; set; }
+        
         [Display(Name = "Наименование")]
         public string NameTypesofComponents { get; set; }
 
         [Display(Name = "Описание")]
         public string Description { get; set; }
-        public DbSet<TypesofСomponent> TypesofСomponents { get; set; }
 
     }
 }

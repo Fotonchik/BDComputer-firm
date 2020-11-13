@@ -21,7 +21,7 @@ namespace ComputerFirm.Migrations
 
             modelBuilder.Entity("Computerfirm.Models.Component", b =>
                 {
-                    b.Property<long>("ComponentID")
+                    b.Property<long>("ID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -29,7 +29,7 @@ namespace ComputerFirm.Migrations
                     b.Property<string>("Brand")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<long?>("ComponentID1")
+                    b.Property<long>("ComponentID")
                         .HasColumnType("bigint");
 
                     b.Property<string>("CountryProduced")
@@ -56,12 +56,13 @@ namespace ComputerFirm.Migrations
                     b.Property<string>("Specificatrion")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<long>("TypesofСomponent_ID")
+                        .HasColumnType("bigint");
+
                     b.Property<DateTime>("WarrantyPeriod")
                         .HasColumnType("datetime2");
 
-                    b.HasKey("ComponentID");
-
-                    b.HasIndex("ComponentID1");
+                    b.HasKey("ID");
 
                     b.HasIndex("OrderID");
 
@@ -74,7 +75,7 @@ namespace ComputerFirm.Migrations
 
             modelBuilder.Entity("Computerfirm.Models.Customer", b =>
                 {
-                    b.Property<long>("CustomerID")
+                    b.Property<long>("ID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -82,7 +83,7 @@ namespace ComputerFirm.Migrations
                     b.Property<string>("Address")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<long?>("CustomerID1")
+                    b.Property<long>("CustomerID")
                         .HasColumnType("bigint");
 
                     b.Property<string>("FullName")
@@ -94,9 +95,7 @@ namespace ComputerFirm.Migrations
                     b.Property<int>("Telephone")
                         .HasColumnType("int");
 
-                    b.HasKey("CustomerID");
-
-                    b.HasIndex("CustomerID1");
+                    b.HasKey("ID");
 
                     b.HasIndex("OrderID");
 
@@ -109,6 +108,18 @@ namespace ComputerFirm.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<long>("Component_1ID")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("Component_2ID")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("Component_3ID")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("Customer_ID")
+                        .HasColumnType("bigint");
 
                     b.Property<DateTime>("DueData")
                         .HasColumnType("datetime2");
@@ -125,8 +136,20 @@ namespace ComputerFirm.Migrations
                     b.Property<bool>("PaymentMark")
                         .HasColumnType("bit");
 
+                    b.Property<long>("Service_1ID")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("Service_2ID")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("Service_3ID")
+                        .HasColumnType("bigint");
+
                     b.Property<int>("ShareofPrepayment")
                         .HasColumnType("int");
+
+                    b.Property<long>("Staff_ID")
+                        .HasColumnType("bigint");
 
                     b.Property<int>("TotalCost")
                         .HasColumnType("int");
@@ -138,7 +161,7 @@ namespace ComputerFirm.Migrations
 
             modelBuilder.Entity("Computerfirm.Models.Position", b =>
                 {
-                    b.Property<long>("PositionID")
+                    b.Property<long>("ID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -149,7 +172,7 @@ namespace ComputerFirm.Migrations
                     b.Property<string>("NamePosition")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<long?>("PositionID1")
+                    b.Property<long>("PositionID")
                         .HasColumnType("bigint");
 
                     b.Property<string>("Requirements")
@@ -161,9 +184,7 @@ namespace ComputerFirm.Migrations
                     b.Property<long?>("StaffID")
                         .HasColumnType("bigint");
 
-                    b.HasKey("PositionID");
-
-                    b.HasIndex("PositionID1");
+                    b.HasKey("ID");
 
                     b.HasIndex("StaffID");
 
@@ -172,7 +193,7 @@ namespace ComputerFirm.Migrations
 
             modelBuilder.Entity("Computerfirm.Models.Service", b =>
                 {
-                    b.Property<long>("ServiceID")
+                    b.Property<long>("ID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -195,10 +216,10 @@ namespace ComputerFirm.Migrations
                     b.Property<int>("Price")
                         .HasColumnType("int");
 
-                    b.Property<long?>("ServiceID1")
+                    b.Property<long>("ServiceID")
                         .HasColumnType("bigint");
 
-                    b.HasKey("ServiceID");
+                    b.HasKey("ID");
 
                     b.HasIndex("OrderID");
 
@@ -206,14 +227,12 @@ namespace ComputerFirm.Migrations
 
                     b.HasIndex("OrderID2");
 
-                    b.HasIndex("ServiceID1");
-
                     b.ToTable("Service");
                 });
 
             modelBuilder.Entity("Computerfirm.Models.Staff", b =>
                 {
-                    b.Property<long>("StaffID")
+                    b.Property<long>("ID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -224,14 +243,14 @@ namespace ComputerFirm.Migrations
                     b.Property<short>("Age")
                         .HasColumnType("smallint");
 
-                    b.Property<long?>("ComponentID")
-                        .HasColumnType("bigint");
-
                     b.Property<string>("FullName")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Gender")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<long?>("OrderID")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("PassportData")
                         .HasColumnType("nvarchar(max)");
@@ -239,21 +258,22 @@ namespace ComputerFirm.Migrations
                     b.Property<int>("Phone")
                         .HasColumnType("int");
 
-                    b.Property<long?>("StaffID1")
+                    b.Property<long>("Position_ID")
                         .HasColumnType("bigint");
 
-                    b.HasKey("StaffID");
+                    b.Property<long>("StaffID")
+                        .HasColumnType("bigint");
 
-                    b.HasIndex("ComponentID");
+                    b.HasKey("ID");
 
-                    b.HasIndex("StaffID1");
+                    b.HasIndex("OrderID");
 
                     b.ToTable("Staff");
                 });
 
             modelBuilder.Entity("Computerfirm.Models.TypesofСomponent", b =>
                 {
-                    b.Property<long>("TypesofСomponentID")
+                    b.Property<long>("ID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -267,24 +287,15 @@ namespace ComputerFirm.Migrations
                     b.Property<string>("NameTypesofComponents")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<long?>("TypesofСomponentID1")
-                        .HasColumnType("bigint");
-
-                    b.HasKey("TypesofСomponentID");
+                    b.HasKey("ID");
 
                     b.HasIndex("ComponentID");
-
-                    b.HasIndex("TypesofСomponentID1");
 
                     b.ToTable("TypesofСomponent");
                 });
 
             modelBuilder.Entity("Computerfirm.Models.Component", b =>
                 {
-                    b.HasOne("Computerfirm.Models.Component", null)
-                        .WithMany("Components")
-                        .HasForeignKey("ComponentID1");
-
                     b.HasOne("Computerfirm.Models.Order", null)
                         .WithMany("Component1ID")
                         .HasForeignKey("OrderID");
@@ -300,10 +311,6 @@ namespace ComputerFirm.Migrations
 
             modelBuilder.Entity("Computerfirm.Models.Customer", b =>
                 {
-                    b.HasOne("Computerfirm.Models.Customer", null)
-                        .WithMany("Customers")
-                        .HasForeignKey("CustomerID1");
-
                     b.HasOne("Computerfirm.Models.Order", null)
                         .WithMany("CustomerID")
                         .HasForeignKey("OrderID");
@@ -311,10 +318,6 @@ namespace ComputerFirm.Migrations
 
             modelBuilder.Entity("Computerfirm.Models.Position", b =>
                 {
-                    b.HasOne("Computerfirm.Models.Position", null)
-                        .WithMany("Positions")
-                        .HasForeignKey("PositionID1");
-
                     b.HasOne("Computerfirm.Models.Staff", null)
                         .WithMany("PositionID")
                         .HasForeignKey("StaffID");
@@ -333,21 +336,13 @@ namespace ComputerFirm.Migrations
                     b.HasOne("Computerfirm.Models.Order", null)
                         .WithMany("Service3ID")
                         .HasForeignKey("OrderID2");
-
-                    b.HasOne("Computerfirm.Models.Service", null)
-                        .WithMany("Services")
-                        .HasForeignKey("ServiceID1");
                 });
 
             modelBuilder.Entity("Computerfirm.Models.Staff", b =>
                 {
-                    b.HasOne("Computerfirm.Models.Component", null)
+                    b.HasOne("Computerfirm.Models.Order", null)
                         .WithMany("StaffID")
-                        .HasForeignKey("ComponentID");
-
-                    b.HasOne("Computerfirm.Models.Staff", null)
-                        .WithMany("Staffs")
-                        .HasForeignKey("StaffID1");
+                        .HasForeignKey("OrderID");
                 });
 
             modelBuilder.Entity("Computerfirm.Models.TypesofСomponent", b =>
@@ -355,10 +350,6 @@ namespace ComputerFirm.Migrations
                     b.HasOne("Computerfirm.Models.Component", null)
                         .WithMany("TypesofСomponent")
                         .HasForeignKey("ComponentID");
-
-                    b.HasOne("Computerfirm.Models.TypesofСomponent", null)
-                        .WithMany("TypesofСomponents")
-                        .HasForeignKey("TypesofСomponentID1");
                 });
 #pragma warning restore 612, 618
         }
