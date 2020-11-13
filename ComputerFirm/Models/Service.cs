@@ -10,9 +10,8 @@ namespace Computerfirm.Models
 {
     public class Service
     {
-        public long ID { get; set; }
         [Display(Name = "Код услуги")]
-        public long ServiceID { get; set; }
+        public long ID { get; set; }
 
         [Display(Name = "Наименование")]
         public string Name { get; set; }

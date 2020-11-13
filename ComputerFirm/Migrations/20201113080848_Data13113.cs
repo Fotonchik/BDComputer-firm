@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ComputerFirm.Migrations
 {
-    public partial class Data13112 : Migration
+    public partial class Data13113 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -40,7 +40,6 @@ namespace ComputerFirm.Migrations
                 {
                     ID = table.Column<long>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    ComponentID = table.Column<long>(nullable: false),
                     Brand = table.Column<string>(nullable: true),
                     Price = table.Column<int>(nullable: false),
                     DataofIssue = table.Column<DateTime>(nullable: false),
@@ -82,7 +81,6 @@ namespace ComputerFirm.Migrations
                 {
                     ID = table.Column<long>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    CustomerID = table.Column<long>(nullable: false),
                     FullName = table.Column<string>(nullable: true),
                     Telephone = table.Column<int>(nullable: false),
                     Address = table.Column<string>(nullable: true),
@@ -105,7 +103,6 @@ namespace ComputerFirm.Migrations
                 {
                     ID = table.Column<long>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    ServiceID = table.Column<long>(nullable: false),
                     Name = table.Column<string>(nullable: true),
                     Price = table.Column<int>(nullable: false),
                     Description = table.Column<string>(nullable: true),
@@ -142,7 +139,6 @@ namespace ComputerFirm.Migrations
                 {
                     ID = table.Column<long>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    StaffID = table.Column<long>(nullable: false),
                     FullName = table.Column<string>(nullable: true),
                     Age = table.Column<short>(nullable: false),
                     Gender = table.Column<string>(nullable: true),
@@ -190,19 +186,17 @@ namespace ComputerFirm.Migrations
                 {
                     ID = table.Column<long>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    PositionID = table.Column<long>(nullable: false),
                     NamePosition = table.Column<string>(nullable: true),
                     Salary = table.Column<string>(nullable: true),
                     Duties = table.Column<string>(nullable: true),
                     Requirements = table.Column<string>(nullable: true),
-                    StaffID = table.Column<long>(nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Position", x => x.ID);
                     table.ForeignKey(
-                        name: "FK_Position_Staff_StaffID",
-                        column: x => x.StaffID,
+                        name: "FK_Position_Staff_ID",
+                        column: x => x.ID,
                         principalTable: "Staff",
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Restrict);
@@ -229,9 +223,9 @@ namespace ComputerFirm.Migrations
                 column: "OrderID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Position_StaffID",
+                name: "IX_Position_ID",
                 table: "Position",
-                column: "StaffID");
+                column: "ID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Service_OrderID",

@@ -29,7 +29,7 @@ namespace ComputerFirm.Pages.Services
                 return NotFound();
             }
 
-            Service = await _context.Service.FirstOrDefaultAsync(m => m.ServiceID == id);
+            Service = await _context.Service.FirstOrDefaultAsync(m => m.ID == id);
 
             if (Service == null)
             {

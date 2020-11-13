@@ -29,7 +29,7 @@ namespace ComputerFirm.Pages.Positions
                 return NotFound();
             }
 
-            Position = await _context.Position.FirstOrDefaultAsync(m => m.PositionID == id);
+            Position = await _context.Position.FirstOrDefaultAsync(m => m.ID == id);
 
             if (Position == null)
             {

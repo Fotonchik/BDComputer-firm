@@ -2,20 +2,17 @@
 @model ComputerFirm.Pages.Positions.IndexModel
 
 @{
-    ViewData["Title"] = "Должность";
+    ViewData["Title"] = "Index";
 }
 
-<h1>Должность</h1>
+<h1>Index</h1>
 
 <p>
-    <a asp-page="Create">Добавить новую должность</a>
+    <a asp-page="Create">Create New</a>
 </p>
 <table class="table">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Position[0].PositionID)
-            </th>
             <th>
                 @Html.DisplayNameFor(model => model.Position[0].NamePosition)
             </th>
@@ -47,9 +44,9 @@
                 @Html.DisplayFor(modelItem => item.Requirements)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.PositionID">Редактировать</a> |
-                <a asp-page="./Details" asp-route-id="@item.PositionID">Информация</a> |
-                <a asp-page="./Delete" asp-route-id="@item.PositionID">Удалить</a>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
             </td>
         </tr>
 }

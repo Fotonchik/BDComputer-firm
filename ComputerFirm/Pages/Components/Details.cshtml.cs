@@ -28,7 +28,7 @@ namespace ComputerFirm.Pages.Components
                 return NotFound();
             }
 
-            Component = await _context.Component.FirstOrDefaultAsync(m => m.ComponentID == id);
+            Component = await _context.Component.FirstOrDefaultAsync(m => m.ID == id);
 
             if (Component == null)
             {

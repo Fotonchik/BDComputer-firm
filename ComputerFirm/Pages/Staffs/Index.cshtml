@@ -15,7 +15,7 @@
         <tr>
 
             <th>
-                @Html.DisplayNameFor(model => model.Staff[0].StaffID)
+                @Html.DisplayNameFor(model => model.Staff[0].ID)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Staff[0].FullName)
@@ -36,15 +36,16 @@
                 @Html.DisplayNameFor(model => model.Staff[0].PassportData)
             </th>
 
-            <th>
-                @Html.DisplayNameFor(model => model.Staff[0].PositionID)
-            </th>
+
             <th></th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model.Staff) {
         <tr>
+            <td>
+                @Html.DisplayFor(model => item.ID)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.FullName)
             </td>
@@ -65,15 +66,16 @@
             </td>
 
             @*<td>
-                try 
-                {
-                    @Models.Position
-                }
-            </td>*@
+            try
+            {
+                @Models.Position
+            }
+                
+        </td>*@
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.StaffID">Редактировать</a> |
-                <a asp-page="./Details" asp-route-id="@item.StaffID">Информация</a> |
-                <a asp-page="./Delete" asp-route-id="@item.StaffID">Удалить</a>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Редактировать</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Информация</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Удалить</a>
             </td>
         </tr>
 }

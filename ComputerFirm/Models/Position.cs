@@ -10,9 +10,9 @@ namespace Computerfirm.Models
 {
     public class Position
     {
-        public long ID { get; set; }
         [Display(Name = "Код должности")]
-        public long PositionID { get; set; }
+        public long ID { get; set; }
+        
 
         [Display(Name = "Наименование должности")]
         public string NamePosition { get; set; }

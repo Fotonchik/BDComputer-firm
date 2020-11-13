@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ComputerFirm.Migrations
 {
     [DbContext(typeof(ComputerFirmContext))]
-    [Migration("20201113070537_Data13112")]
-    partial class Data13112
+    [Migration("20201113080848_Data13113")]
+    partial class Data13113
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -30,9 +30,6 @@ namespace ComputerFirm.Migrations
 
                     b.Property<string>("Brand")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<long>("ComponentID")
-                        .HasColumnType("bigint");
 
                     b.Property<string>("CountryProduced")
                         .HasColumnType("nvarchar(max)");
@@ -84,9 +81,6 @@ namespace ComputerFirm.Migrations
 
                     b.Property<string>("Address")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<long>("CustomerID")
-                        .HasColumnType("bigint");
 
                     b.Property<string>("FullName")
                         .HasColumnType("nvarchar(max)");
@@ -174,21 +168,18 @@ namespace ComputerFirm.Migrations
                     b.Property<string>("NamePosition")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<long>("PositionID")
-                        .HasColumnType("bigint");
-
                     b.Property<string>("Requirements")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Salary")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<long?>("StaffID")
+                    b.Property<long?>("ID")
                         .HasColumnType("bigint");
 
                     b.HasKey("ID");
 
-                    b.HasIndex("StaffID");
+                    b.HasIndex("ID");
 
                     b.ToTable("Position");
                 });
@@ -217,9 +208,6 @@ namespace ComputerFirm.Migrations
 
                     b.Property<int>("Price")
                         .HasColumnType("int");
-
-                    b.Property<long>("ServiceID")
-                        .HasColumnType("bigint");
 
                     b.HasKey("ID");
 
@@ -263,7 +251,7 @@ namespace ComputerFirm.Migrations
                     b.Property<long>("Position_ID")
                         .HasColumnType("bigint");
 
-                    b.Property<long>("StaffID")
+                    b.Property<long>("ID")
                         .HasColumnType("bigint");
 
                     b.HasKey("ID");
@@ -321,8 +309,8 @@ namespace ComputerFirm.Migrations
             modelBuilder.Entity("Computerfirm.Models.Position", b =>
                 {
                     b.HasOne("Computerfirm.Models.Staff", null)
-                        .WithMany("PositionID")
-                        .HasForeignKey("StaffID");
+                        .WithMany("Positions_ID")
+                        .HasForeignKey("ID");
                 });
 
             modelBuilder.Entity("Computerfirm.Models.Service", b =>
@@ -343,7 +331,7 @@ namespace ComputerFirm.Migrations
             modelBuilder.Entity("Computerfirm.Models.Staff", b =>
                 {
                     b.HasOne("Computerfirm.Models.Order", null)
-                        .WithMany("StaffID")
+                        .WithMany("ID")
                         .HasForeignKey("OrderID");
                 });
 

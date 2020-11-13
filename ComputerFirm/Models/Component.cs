@@ -11,9 +11,8 @@ namespace Computerfirm.Models
     public class Component
     {
 
-        public long ID { get; set; }
         [Display(Name = "Код комплектующего")]
-        public long ComponentID { get; set; }
+        public long ID { get; set; }
 
 
         [Display(Name = "Марка")]

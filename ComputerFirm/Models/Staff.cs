@@ -12,8 +12,6 @@ namespace Computerfirm.Models
     {
         [Display(Name = "Код сотрудника")]
         public long ID { get; set; }
-        [Display(Name = "Код сотрудника")]
-        public long StaffID { get; set; }
         [Display(Name ="ФИО")]
         public string FullName { get; set; }
         [Display(Name = "Возраст")]
@@ -28,7 +26,7 @@ namespace Computerfirm.Models
         public string PassportData { get; set; }
 
         [Display(Name = "Должность")]
-        public DbSet <Position> PositionID { get; set; }
+        public DbSet <Position> Positions_ID { get; set; }
 
         [Display(Name = "Код должности")]
         public long Position_ID { get; set; }

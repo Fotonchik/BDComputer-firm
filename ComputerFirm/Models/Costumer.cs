@@ -11,9 +11,8 @@ namespace Computerfirm.Models
     public class Customer
     {
 
-        public long ID { get; set; }
         [Display(Name = "Код заказчика")]
-        public long CustomerID { get; set; }
+        public long ID { get; set; }
 
         [Display(Name = "ФИО")]
         public string FullName { get; set; }

@@ -30,7 +30,7 @@ namespace ComputerFirm.Pages.Services
                 return NotFound();
             }
 
-            Service = await _context.Service.FirstOrDefaultAsync(m => m.ServiceID == id);
+            Service = await _context.Service.FirstOrDefaultAsync(m => m.ID== id);
 
             if (Service == null)
             {
@@ -56,7 +56,7 @@ namespace ComputerFirm.Pages.Services
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!ServiceExists(Service.ServiceID))
+                if (!ServiceExists(Service.ID))
                 {
                     return NotFound();
                 }
@@ -71,7 +71,7 @@ namespace ComputerFirm.Pages.Services
 
         private bool ServiceExists(long id)
         {
-            return _context.Service.Any(e => e.ServiceID == id);
+            return _context.Service.Any(e => e.ID == id);
         }
     }
 }

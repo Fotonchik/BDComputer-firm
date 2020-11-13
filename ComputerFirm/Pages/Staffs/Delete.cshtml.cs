@@ -29,7 +29,7 @@ namespace ComputerFirm.Pages.Staffs
                 return NotFound();
             }
 
-            Staff = await _context.Staff.FirstOrDefaultAsync(m => m.StaffID == id);
+            Staff = await _context.Staff.FirstOrDefaultAsync(m => m.ID == id);
 
             if (Staff == null)
             {

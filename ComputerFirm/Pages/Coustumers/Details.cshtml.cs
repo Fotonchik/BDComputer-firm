@@ -28,7 +28,7 @@ namespace ComputerFirm.Pages.Coustumers
                 return NotFound();
             }
 
-            Customer = await _context.Customer.FirstOrDefaultAsync(m => m.CustomerID == id);
+            Customer = await _context.Customer.FirstOrDefaultAsync(m => m.ID== id);
 
             if (Customer == null)
             {

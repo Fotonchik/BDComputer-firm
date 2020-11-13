@@ -30,7 +30,7 @@ namespace ComputerFirm.Pages.Components
                 return NotFound();
             }
 
-            Component = await _context.Component.FirstOrDefaultAsync(m => m.ComponentID == id);
+            Component = await _context.Component.FirstOrDefaultAsync(m => m.ID == id);
 
             if (Component == null)
             {
@@ -56,7 +56,7 @@ namespace ComputerFirm.Pages.Components
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!ComponentExists(Component.ComponentID))
+                if (!ComponentExists(Component.ID))
                 {
                     return NotFound();
                 }
@@ -71,7 +71,7 @@ namespace ComputerFirm.Pages.Components
 
         private bool ComponentExists(long id)
         {
-            return _context.Component.Any(e => e.ComponentID == id);
+            return _context.Component.Any(e => e.ID == id);
         }
     }
 }

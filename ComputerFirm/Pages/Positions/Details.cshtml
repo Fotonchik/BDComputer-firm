@@ -2,12 +2,13 @@
 @model ComputerFirm.Pages.Positions.DetailsModel
 
 @{
-    ViewData["Title"] = "Информация о должности";
+    ViewData["Title"] = "Details";
 }
 
-<h1>Информация о должности</h1>
+<h1>Details</h1>
 
 <div>
+    <h4>Position</h4>
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
@@ -37,6 +38,6 @@
     </dl>
 </div>
 <div>
-    <a asp-page="./Edit" asp-route-id="@Model.Position.PositionID">Редактировать</a> |
-    <a asp-page="./Index">Вернуться в список</a>
+    <a asp-page="./Edit" asp-route-id="@Model.Position.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
 </div>

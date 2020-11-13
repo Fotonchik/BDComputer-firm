@@ -30,7 +30,7 @@ namespace ComputerFirm.Pages.Positions
                 return NotFound();
             }
 
-            Position = await _context.Position.FirstOrDefaultAsync(m => m.PositionID == id);
+            Position = await _context.Position.FirstOrDefaultAsync(m => m.ID == id);
 
             if (Position == null)
             {
@@ -56,7 +56,7 @@ namespace ComputerFirm.Pages.Positions
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!PositionExists(Position.PositionID))
+                if (!PositionExists(Position.ID))
                 {
                     return NotFound();
                 }
@@ -71,7 +71,7 @@ namespace ComputerFirm.Pages.Positions
 
         private bool PositionExists(long id)
         {
-            return _context.Position.Any(e => e.PositionID == id);
+            return _context.Position.Any(e => e.ID == id);
         }
     }
 }

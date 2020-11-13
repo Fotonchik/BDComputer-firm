@@ -15,7 +15,7 @@
         <tr>
 
             <th>
-                @Html.DisplayNameFor(model => model.Customer[0].CustomerID)
+                @Html.DisplayNameFor(model => model.Customer[0].ID)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Customer[0].FullName)
@@ -42,9 +42,9 @@
                 @Html.DisplayFor(modelItem => item.Address)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.CustomerID">Редактировать</a> |
-                <a asp-page="./Details" asp-route-id="@item.CustomerID">Информация</a> |
-                <a asp-page="./Delete" asp-route-id="@item.CustomerID">Удалить</a>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Редактировать</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Информация</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Удалить</a>
             </td>
         </tr>
 }

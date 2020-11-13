@@ -15,7 +15,7 @@
         <tr>
 
             <th>
-                @Html.DisplayNameFor(model => model.Component[0].ComponentID)
+                @Html.DisplayNameFor(model => model.Component[0].ID)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Component[0].TypesofСomponent_ID)
@@ -69,9 +69,9 @@
                 @Html.DisplayFor(modelItem => item.CountryProduced)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.ComponentID">Редактировать</a> |
-                <a asp-page="./Details" asp-route-id="@item.ComponentID">Информация</a> |
-                <a asp-page="./Delete" asp-route-id="@item.ComponentID">Удалить</a>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Редактировать</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Информация</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Удалить</a>
             </td>
         </tr>
 }
