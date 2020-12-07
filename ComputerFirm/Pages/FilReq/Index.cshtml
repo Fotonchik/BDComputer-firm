@@ -1,16 +1,17 @@
 ﻿@page
 @model ComputerFirm.Pages.FilReq.IndexModel
 @{
+    ViewData["Title"] = "Список запросов и фильтров";
 }
 <script>
     function BtnFun(ClassName, obj) {
         var value = obj.value;
         var name = "." + ClassName;
-        if (value[0] != ".") {
-            & name.prop('disabled', false);
+        if (value[0] != "-") {
+            $(name).prop('disabled', false);
         }
         else {
-             & name.prop('disabled', true);
+            $(name).prop('disabled', true);
         }
     }
 </script>

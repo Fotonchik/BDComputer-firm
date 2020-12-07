@@ -26,7 +26,7 @@ namespace Computerfirm.Models
         public string PassportData { get; set; }
 
         [Display(Name = "Должность")]
-        public DbSet <Position> Positions_ID { get; set; }
+        public DbSet <Position> Positions{ get; set; }
 
         [Display(Name = "Код должности")]
         public long Position_ID { get; set; }

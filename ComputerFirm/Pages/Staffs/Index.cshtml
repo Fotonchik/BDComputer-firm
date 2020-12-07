@@ -15,9 +15,6 @@
         <tr>
 
             <th>
-                @Html.DisplayNameFor(model => model.Staff[0].ID)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.Staff[0].FullName)
             </th>
             <th>
@@ -36,7 +33,7 @@
                 @Html.DisplayNameFor(model => model.Staff[0].PassportData)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Staff[0].Position_ID)
+                @Html.DisplayNameFor(model => model.Staff[0].Positions)
             </th>
 
 
@@ -46,9 +43,6 @@
     <tbody>
 @foreach (var item in Model.Staff) {
         <tr>
-            <td>
-                @Html.DisplayFor(model => item.ID)
-            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.FullName)
             </td>
