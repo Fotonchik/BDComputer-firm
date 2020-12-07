@@ -18,16 +18,16 @@ namespace ComputerFirm.Pages.FilReq
             _context = context;
         }
         //public IList<Staff> Staff { get; set; }
-        public IList<SelectListItem> SelPosition { get; set; }
+        public List<SelectListItem> SelPosition { get; set; }
 
-        public IActionResult OnGet()
+        public void OnGet()
         {
             SelPosition = _context.Position.Select(p =>
                 new SelectListItem {
                     Value = p.ID.ToString(),
                     Text = p.NamePosition
                 }).ToList();
-            return Page();
+            
         }
     }
 }

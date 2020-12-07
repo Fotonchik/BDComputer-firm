@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ComputerFirm.Migrations
 {
-    public partial class Data13113 : Migration
+    public partial class Data0712 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -190,13 +190,14 @@ namespace ComputerFirm.Migrations
                     Salary = table.Column<string>(nullable: true),
                     Duties = table.Column<string>(nullable: true),
                     Requirements = table.Column<string>(nullable: true),
+                    StaffID = table.Column<long>(nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Position", x => x.ID);
                     table.ForeignKey(
-                        name: "FK_Position_Staff_ID",
-                        column: x => x.ID,
+                        name: "FK_Position_Staff_StaffID",
+                        column: x => x.StaffID,
                         principalTable: "Staff",
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Restrict);
@@ -223,9 +224,9 @@ namespace ComputerFirm.Migrations
                 column: "OrderID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Position_ID",
+                name: "IX_Position_StaffID",
                 table: "Position",
-                column: "ID");
+                column: "StaffID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Service_OrderID",

@@ -2,6 +2,18 @@
 @model ComputerFirm.Pages.FilReq.IndexModel
 @{
 }
+<script>
+    function BtnFun(ClassName, obj) {
+        var value = obj.value;
+        var name = "." + ClassName;
+        if (value[0] != ".") {
+            & name.prop('disabled', false);
+        }
+        else {
+             & name.prop('disabled', true);
+        }
+    }
+</script>
 <div class="accordion" id="accordionExample">
     <div class="card">
         <div class="card-header" id="headingOne">
@@ -15,8 +27,6 @@
         <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
             <div class="card-body">
                 <ul>
-                    <li><a class="nav-link text-dark" asp-area="" asp-page="Request/PerDep">отдел кадров</a></li>
-                    <li><a class="nav-link text-dark" asp-area="" asp-page="Request/PerDep">отдел кадров</a></li>
                     <li><a class="nav-link text-dark" asp-area="" asp-page="Request/PerDep">отдел кадров</a></li>
                 </ul>
             </div>
@@ -34,10 +44,10 @@
             <form method="get">
                 <div class="card-body">
                     Фильтровать сотрудников по должности:
-                    <select asp-items="Model.SelPosition" name="id" class="form-control-sm">
+                    <select asp-items="Model.SelPosition" name="id" class="form-control-sm" onclick="BtnFun('FilPos', this)">
                         <option value="-1">не выбран</option>
                     </select>
-                    <button type="button" class="btn btn-primary">Отфильтровать</button>
+                    <button asp-page ="Filter/FilterPosition" class="btn btn-primary FilPos" disabled>Отфильтровать</button>
                 </div>
             </form>
             

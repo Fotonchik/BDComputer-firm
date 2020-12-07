@@ -172,12 +172,12 @@ namespace ComputerFirm.Migrations
                     b.Property<string>("Salary")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<long?>("ID")
+                    b.Property<long?>("StaffID")
                         .HasColumnType("bigint");
 
                     b.HasKey("ID");
 
-                    b.HasIndex("ID");
+                    b.HasIndex("StaffID");
 
                     b.ToTable("Position");
                 });
@@ -249,9 +249,6 @@ namespace ComputerFirm.Migrations
                     b.Property<long>("Position_ID")
                         .HasColumnType("bigint");
 
-                    b.Property<long>("ID")
-                        .HasColumnType("bigint");
-
                     b.HasKey("ID");
 
                     b.HasIndex("OrderID");
@@ -308,7 +305,7 @@ namespace ComputerFirm.Migrations
                 {
                     b.HasOne("Computerfirm.Models.Staff", null)
                         .WithMany("Positions_ID")
-                        .HasForeignKey("ID");
+                        .HasForeignKey("StaffID");
                 });
 
             modelBuilder.Entity("Computerfirm.Models.Service", b =>
@@ -329,7 +326,7 @@ namespace ComputerFirm.Migrations
             modelBuilder.Entity("Computerfirm.Models.Staff", b =>
                 {
                     b.HasOne("Computerfirm.Models.Order", null)
-                        .WithMany("ID")
+                        .WithMany("StaffID")
                         .HasForeignKey("OrderID");
                 });
 
