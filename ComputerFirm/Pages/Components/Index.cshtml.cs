@@ -20,10 +20,12 @@ namespace ComputerFirm.Pages.Components
         }
 
         public IList<Component> Component { get;set; }
+        public IList<TypesofСomponent> TypesofСomponent { get;set; }
 
         public async Task OnGetAsync()
         {
             Component = await _context.Component.ToListAsync();
+            TypesofСomponent = await _context.TypesofСomponent.ToListAsync();
         }
     }
 }

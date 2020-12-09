@@ -15,12 +15,6 @@
         <tr>
 
             <th>
-                @Html.DisplayNameFor(model => model.Component[0].ID)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Component[0].TypesofСomponent_ID)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.Component[0].Brand)
             </th>
             <th>
@@ -40,6 +34,9 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Component[0].CountryProduced)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Component[0].TypesofСomponent)
             </th>
             <th></th>
         </tr>
@@ -69,10 +66,23 @@
                 @Html.DisplayFor(modelItem => item.CountryProduced)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.ID">Редактировать</a> |
-                <a asp-page="./Details" asp-route-id="@item.ID">Информация</a> |
-                <a asp-page="./Delete" asp-route-id="@item.ID">Удалить</a>
-            </td>
+                @{
+                    try
+                    {
+                        @Model.TypesofСomponent.First(r => r.ID == item.TypesofСomponent_ID).NameTypesofComponents
+                    }
+                    catch
+                    {
+                        <p>нет</p>
+                    }
+
+            }
+        </td>
+        <td>
+            <a asp-page="./Edit" asp-route-id="@item.ID">Редактировать</a> |
+            <a asp-page="./Details" asp-route-id="@item.ID">Информация</a> |
+            <a asp-page="./Delete" asp-route-id="@item.ID">Удалить</a>
+        </td>
         </tr>
 }
     </tbody>
