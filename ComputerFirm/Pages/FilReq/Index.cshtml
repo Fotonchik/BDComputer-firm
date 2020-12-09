@@ -27,9 +27,11 @@
 
         <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
             <div class="card-body">
-                <ul>
-                    <li><a class="nav-link text-dark" asp-area="" asp-page="Request/PerDep">отдел кадров</a></li>
-                </ul>
+
+                <a class="nav-link text-dark" asp-area="" asp-page="Request/PerDep">Отдел кадров</a><br />
+                <a class="nav-link text-dark" asp-area="" asp-page="Request/ListOrders">Список заказов</a><br />
+                <a class="nav-link text-dark" asp-area="" asp-page="Request/ListComponent">Список комплектующих</a><br />
+
             </div>
         </div>
     </div>
@@ -48,10 +50,10 @@
                     <select asp-items="Model.SelPosition" name="id" class="form-control-sm" onclick="BtnFun('FilPos', this)">
                         <option value="-1">не выбран</option>
                     </select>
-                    <button asp-page ="Filter/FilterPosition" class="btn btn-primary FilPos" disabled>Отфильтровать</button>
+                    <button asp-page="Filter/FilterPosition" class="btn btn-primary FilPos" disabled>Отфильтровать</button>
                 </div>
             </form>
-            
+
         </div>
     </div>
 </div>

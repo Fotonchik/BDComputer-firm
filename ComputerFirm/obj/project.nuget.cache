@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Z6e1qFSvUBXyljjk4b4E8MmHGSF7h4pJ1W7y+B5af7HSYcr2qwXrLNNS0tgVlVD/fy1o8OLEVgtxn3fyMZPnFg==",
+  "dgSpecHash": "Tq37ZHKXBbmNBUAk9qkcT5dLZV/1Xfqgkg8flp31BRioFWbra6uHFZnCSjl6v03eO1OE+Ow+yHC/qgSk5StGqg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\kolgn\\Desktop\\Программы\\091220clone\\ComputerFirm\\ComputerFirm.csproj",
+  "projectFilePath": "C:\\Users\\kolgn\\Desktop\\Программы\\вечером клонирую 0912\\ComputerFirm\\ComputerFirm.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kolgn\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\kolgn\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

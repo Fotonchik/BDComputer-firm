@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kolgn\\Desktop\\Программы\\091220clone\\ComputerFirm\\ComputerFirm.csproj": {}
+    "C:\\Users\\kolgn\\Desktop\\Программы\\вечером клонирую 0912\\ComputerFirm\\ComputerFirm.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kolgn\\Desktop\\Программы\\091220clone\\ComputerFirm\\ComputerFirm.csproj": {
+    "C:\\Users\\kolgn\\Desktop\\Программы\\вечером клонирую 0912\\ComputerFirm\\ComputerFirm.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kolgn\\Desktop\\Программы\\091220clone\\ComputerFirm\\ComputerFirm.csproj",
+        "projectUniqueName": "C:\\Users\\kolgn\\Desktop\\Программы\\вечером клонирую 0912\\ComputerFirm\\ComputerFirm.csproj",
         "projectName": "ComputerFirm",
-        "projectPath": "C:\\Users\\kolgn\\Desktop\\Программы\\091220clone\\ComputerFirm\\ComputerFirm.csproj",
+        "projectPath": "C:\\Users\\kolgn\\Desktop\\Программы\\вечером клонирую 0912\\ComputerFirm\\ComputerFirm.csproj",
         "packagesPath": "C:\\Users\\kolgn\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kolgn\\Desktop\\Программы\\091220clone\\ComputerFirm\\obj\\",
+        "outputPath": "C:\\Users\\kolgn\\Desktop\\Программы\\вечером клонирую 0912\\ComputerFirm\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kolgn\\AppData\\Roaming\\NuGet\\NuGet.Config",

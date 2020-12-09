@@ -1,0 +1,35 @@
+﻿@page
+@model ComputerFirm.Pages.FilReq.Request.ListOrdersModel
+@{
+}
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">@Html.DisplayNameFor(ModelItem => Model.Order[0].Component_1ID)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Order)
+        {
+            <tr>
+                <td>@Html.DisplayFor(ModelItem => item.Component_1ID)</td>
+                <td>
+                    @{
+                        try
+                        {
+                            @Model.Component.First(p => p.ID == item.Component_1ID).Brand
+                        }
+                        catch
+                        {
+                            <p>нет</p>
+                        }
+                    }
+                </td>
+            </tr>
+        }
+
+
+    </tbody>
+</table>
+
