@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kolgn\\Desktop\\Программы\\clone\\ComputerFirm\\ComputerFirm.csproj": {}
+    "C:\\Users\\kolgn\\Desktop\\Программы\\091220clone\\ComputerFirm\\ComputerFirm.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kolgn\\Desktop\\Программы\\clone\\ComputerFirm\\ComputerFirm.csproj": {
+    "C:\\Users\\kolgn\\Desktop\\Программы\\091220clone\\ComputerFirm\\ComputerFirm.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kolgn\\Desktop\\Программы\\clone\\ComputerFirm\\ComputerFirm.csproj",
+        "projectUniqueName": "C:\\Users\\kolgn\\Desktop\\Программы\\091220clone\\ComputerFirm\\ComputerFirm.csproj",
         "projectName": "ComputerFirm",
-        "projectPath": "C:\\Users\\kolgn\\Desktop\\Программы\\clone\\ComputerFirm\\ComputerFirm.csproj",
+        "projectPath": "C:\\Users\\kolgn\\Desktop\\Программы\\091220clone\\ComputerFirm\\ComputerFirm.csproj",
         "packagesPath": "C:\\Users\\kolgn\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kolgn\\Desktop\\Программы\\clone\\ComputerFirm\\obj\\",
+        "outputPath": "C:\\Users\\kolgn\\Desktop\\Программы\\091220clone\\ComputerFirm\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kolgn\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -75,6 +75,16 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.10, 3.1.10]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -83,7 +93,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
