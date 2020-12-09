@@ -20,10 +20,17 @@ namespace ComputerFirm.Pages.Orders
         }
 
         public IList<Order> Order { get;set; }
+        public IList<Customer> Customer { get;set; }
+        public IList<Staff> Staff { get;set; }
+        public IList<Component> Component { get;set; }
+        public IList<Service> Service { get;set; }
 
         public async Task OnGetAsync()
         {
             Order = await _context.Order.ToListAsync();
+            Customer = await _context.Customer.ToListAsync();
+            Staff = await _context.Staff.ToListAsync();
+            Service = await _context.Service.ToListAsync();
         }
     }
 }
