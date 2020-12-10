@@ -64,6 +64,27 @@
 
             </form>
 
+            <form method="get">
+                <div class="card-body">
+                    Фильтровать заказы по заказчикам:
+                    <select asp-items="Model.SelOrd" name="id" class="form-control-sm" onclick="BtnFun('FilOrd', this)">
+                        <option value="-1">не выбран</option>
+                    </select>
+                    <button asp-page="Filter/FilterOrders" class="btn btn-primary FilOrd" disabled>Отфильтровать</button>
+                </div>
+
+            </form>
+
+            <form method="get">
+                <div class="card-body">
+                    Фильтровать заказы по заказчикам:
+                    <select asp-items="Model.SelOrddata" name="id" class="form-control-sm" onclick="BtnFun('FilOrddata', this)">
+                        <option value="-1">Дата не выбрана</option>
+                    </select>
+                    <button asp-page="Filter/FilterOrdersdata" class="btn btn-primary FilOrddata" disabled>Отфильтровать</button>
+                </div>
+
+            </form>
         </div>
     </div>
 </div>
