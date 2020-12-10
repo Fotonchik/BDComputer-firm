@@ -28,5 +28,6 @@ namespace ComputerFirm.Data
 
         public DbSet<Computerfirm.Models.TypesofСomponent> TypesofСomponent { get; set; }
         public IEnumerable<object> Orders { get; internal set; }
+        
     }
 }

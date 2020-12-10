@@ -839,3 +839,4 @@ C:\Users\kolgn\Desktop\Программы\вечером клонирую 0912\C
 C:\Users\kolgn\Desktop\Программы\вечером клонирую 0912\ComputerFirm\obj\Debug\netcoreapp3.1\Razor\Pages\FilReq\Filter\FilterComponent.cshtml.g.cs
 C:\Users\kolgn\Desktop\Программы\вечером клонирую 0912\ComputerFirm\obj\Debug\netcoreapp3.1\Razor\Pages\FilReq\Filter\FilterOrders.cshtml.g.cs
 C:\Users\kolgn\Desktop\Программы\вечером клонирую 0912\ComputerFirm\obj\Debug\netcoreapp3.1\ComputerFirm.csprojAssemblyReference.cache
+C:\Users\kolgn\Desktop\Программы\вечером клонирую 0912\ComputerFirm\obj\Debug\netcoreapp3.1\Razor\Pages\FilReq\Filter\FilterOrdersdata.cshtml.g.cs

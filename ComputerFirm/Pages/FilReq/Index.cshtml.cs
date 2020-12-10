@@ -21,7 +21,7 @@ namespace ComputerFirm.Pages.FilReq
         public List<SelectListItem> SelPosition { get; set; }
         public List<SelectListItem> SelComp { get; set; }
         public List<SelectListItem> SelOrd { get; set; }
-        public List<SelectListItem> SelOrddata { get; set; }
+        public List<SelectListItem> OrderData { get; set; }
 
         public void OnGet()
         {
@@ -40,9 +40,14 @@ namespace ComputerFirm.Pages.FilReq
                 new SelectListItem
                 {
                     Value = p.ID.ToString(),
-                    Selected = p.PaymentMark
+                    Text = p.Customer_ID.ToString()
                 }).ToList();
-
+            OrderData = _context.Order.Select(p =>
+               new SelectListItem
+               {
+                   Value = p.ID.ToString(),
+                   Text = p.OrderData.ToString()
+               }).ToList();
         }
     }
 }
