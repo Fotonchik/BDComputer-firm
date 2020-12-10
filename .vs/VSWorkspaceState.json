@@ -1,14 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\ComputerFirm",
-    "\\ComputerFirm\\Migrations",
-    "\\ComputerFirm\\Models",
-    "\\ComputerFirm\\Pages",
-    "\\ComputerFirm\\Pages\\Orders",
-    "\\ComputerFirm\\Pages\\Positions",
-    "\\ComputerFirm\\Pages\\Staffs",
-    "\\ComputerFirm\\Pages\\TypeofComponents"
+    ""
   ],
+  "SelectedNode": "\\ComputerFirm.sln",
   "PreviewInSolutionExplorer": false
 }

@@ -19,6 +19,7 @@ namespace ComputerFirm.Pages.FilReq
         }
         //public IList<Staff> Staff { get; set; }
         public List<SelectListItem> SelPosition { get; set; }
+        public List<SelectListItem> SelComp { get; set; }
 
         public void OnGet()
         {
@@ -27,7 +28,13 @@ namespace ComputerFirm.Pages.FilReq
                     Value = p.ID.ToString(),
                     Text = p.NamePosition
                 }).ToList();
-            
+            SelComp = _context.Component.Select(p =>
+                new SelectListItem
+                {
+                    Value = p.ID.ToString(),
+                    Text = p.Brand
+                }).ToList();
+
         }
     }
 }

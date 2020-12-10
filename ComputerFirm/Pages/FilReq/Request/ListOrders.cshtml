@@ -9,7 +9,6 @@
             <th scope="col">@Html.DisplayNameFor(ModelItem => Model.Order[0].Component_1ID)</th>
 
             <th scope="col">@Html.DisplayNameFor(ModelItem => Model.Order[0].Component_2ID)</th>
-            <th scope="col">@Html.DisplayNameFor(ModelItem => Model.Staff[0].Position_ID)</th>
         </tr>
     </thead>
     <tbody>
@@ -156,25 +155,7 @@
         </tr>
 
     }
-        @foreach (var item in Model.Staff)
-        {
-            <tr>
-                <td>@Html.DisplayFor(ModelItem => item.Position_ID)</td>
-                <td>
-                    @{
-                        try
-                        {
-                            @Model.Staff.First(p => p.ID == item.Position_ID).Position_ID
-                        }
-                        catch
-                        {
-                            <p>нет</p>
-                        }
-                    }
-                </td>
-            </tr>
-
-        }
+       
 
 
         </tbody>

@@ -53,6 +53,16 @@
                     <button asp-page="Filter/FilterPosition" class="btn btn-primary FilPos" disabled>Отфильтровать</button>
                 </div>
             </form>
+            <form method="get">
+                <div class="card-body">
+                    Фильтровать комплектующие по видам:
+                    <select asp-items="Model.SelComp" name="id" class="form-control-sm" onclick="BtnFun('FilComp', this)">
+                        <option value="-1">не выбран</option>
+                    </select>
+                    <button asp-page="Filter/FilterComponent" class="btn btn-primary FilComp" disabled>Отфильтровать</button>
+                </div>
+
+            </form>
 
         </div>
     </div>
